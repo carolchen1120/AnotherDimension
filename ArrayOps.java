@@ -51,4 +51,20 @@ public class ArrayOps {
     return sum(firstStep);
   }
 
+
+  public static int[] sumCols(int[][] matrix) {
+    int cols = matrix[0].length;
+    int rows = matrix.length;
+    int[] answer = new int[cols];
+    int value = 0;
+    for (int i = 0; i < cols; i++) {
+      for (int j = 0; j < rows; j++) {
+        value = value + matrix[j][i];
+      }
+      answer[i] = value;
+      value = 0;
+    }
+    return answer;
+  }
+
 }
