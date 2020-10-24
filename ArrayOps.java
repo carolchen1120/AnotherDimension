@@ -45,4 +45,10 @@ public class ArrayOps {
     return answer;
   }
 
+
+  public static int sum(int[][] matrix) {
+    int[] firstStep = sumRows(matrix);
+    return sum(firstStep);
+  }
+
 }
