@@ -123,20 +123,53 @@ public class Tester {
 
 
     // --- The following are to test isRowMagic() ---
-    int[][] myMatrix1 = {{3, 1, 2}, {1, 2, 3}, {5, 2, 0}};
-    System.out.println(myAnswers.isRowMagic(myMatrix1) == false);
+    // int[][] myMatrix1 = {{3, 1, 2}, {1, 2, 3}, {5, 2, 0}};
+    // System.out.println(myAnswers.isRowMagic(myMatrix1) == false);
+    //
+    // int[][] myMatrix2 = {{-11, 4, 7}, {1, 4, -5}, {5, -5, 0}};
+    // System.out.println(myAnswers.isRowMagic(myMatrix2) == true);
+    //
+    // int[][] myMatrix3 = {{-6, -9}, {-8, -7}, {-10, -5}};
+    // System.out.println(myAnswers.isRowMagic(myMatrix3) == true);
+    //
+    // int[][] myMatrix4 = {{12, -1, 0}};
+    // System.out.println(myAnswers.isRowMagic(myMatrix4) == true);
+    //
+    // int[][] myMatrix5 = {{10, 13, 12}, {11, 24, 10}, {15, 16, 13}};
+    // System.out.println(myAnswers.isRowMagic(myMatrix5) == false);
 
-    int[][] myMatrix2 = {{-11, 4, 7}, {1, 4, -5}, {5, -5, 0}};
-    System.out.println(myAnswers.isRowMagic(myMatrix2) == true);
 
-    int[][] myMatrix3 = {{-6, -9}, {-8, -7}, {-10, -5}};
-    System.out.println(myAnswers.isRowMagic(myMatrix3) == true);
+    // --- The following are to test isColMagic() ---
+    // int[][] myMatrix1 = {{10, 1, 2}, {11, 2, 3}, {5, 2, 10}};
+    // System.out.println(myAnswers.isColMagic(myMatrix1) == false);
+    //
+    // int[][] myMatrix2 = {{-11, -8, -7}, {1, 8, 2}, {5, -5, 0}};
+    // System.out.println(myAnswers.isColMagic(myMatrix2) == true);
+    //
+    // int[][] myMatrix3 = {{-5, -8}, {-8, -10}, {-10, -5}};
+    // System.out.println(myAnswers.isColMagic(myMatrix3) == true);
+    //
+    // int[][] myMatrix4 = {{12}, {-1}, {0}};
+    // System.out.println(myAnswers.isColMagic(myMatrix4) == true);
+    //
+    // int[][] myMatrix5 = {{10, 13, 12}, {11, 24, 10}, {15, 16, 13}};
+    // System.out.println(myAnswers.isColMagic(myMatrix5) == false);
 
-    int[][] myMatrix4 = {{12}, {-1}, {0}};
-    System.out.println(myAnswers.isRowMagic(myMatrix4) == false);
+    // --- The following are to test isLocationMagic() ---
+    int[][] myMatrix1 = {{2, 4, 2}, {2, 2, 2}};
+    System.out.println(myAnswers.isLocationMagic(myMatrix1, 0, 1) == false);
 
-    int[][] myMatrix5 = {{10, 13, 12}, {11, 24, 10}, {15, 16, 13}};
-    System.out.println(myAnswers.isRowMagic(myMatrix5) == false);
+    int[][] myMatrix2 = {{2, 4, 2}, {2, 2, 2}};
+    System.out.println(myAnswers.isLocationMagic(myMatrix2, 1, 1) == true);
+
+    int[][] myMatrix3 = {{2, 4, 2}, {2, 2, 2}, {1, 3, 5}};
+    System.out.println(myAnswers.isLocationMagic(myMatrix3, 2, 2) == true);
+
+    int[][] myMatrix4 = {{2, 4, 3}, {7, 2, 2}};
+    System.out.println(myAnswers.isLocationMagic(myMatrix4, 0, 0) == true);
+
+    int[][] myMatrix5 = {{2, 4, 2}, {2, 2, 2}, {5, 7, 17}};
+    System.out.println(myAnswers.isLocationMagic(myMatrix5, 1, 1) == false);
 
   }
 }
