@@ -25,4 +25,14 @@ public class ArrayOps {
     return answer;
   }
 
+
+  public static int[] sumRows(int[][] matrix) {
+    int rows = matrix.length;
+    int[] answer = new int[rows];
+    for (int i = 0; i < rows; i++) {
+      answer[i] = sum(matrix[i]);
+    }
+    return answer;
+  }
+
 }
