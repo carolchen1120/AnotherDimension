@@ -35,4 +35,14 @@ public class ArrayOps {
     return answer;
   }
 
+
+  public static int[] largestInRows(int[][] matrix) {
+    int rows = matrix.length;
+    int[] answer = new int[rows];
+    for (int i = 0; i < rows; i++) {
+      answer[i] = largest(matrix[i]);
+    }
+    return answer;
+  }
+
 }
