@@ -10,12 +10,18 @@ public class ArrayOps {
 
 
   public static int largest(int[] arr) {
-    int answer = 0;
+    if (arr.length == 0) {
+      return 0;
+    }
+
+    int answer = arr[0];
+
     for (int i = 0; i < arr.length; i++) {
         if (arr[i] > answer) {
             answer = arr[i];
         }
     }
+
     return answer;
   }
 
