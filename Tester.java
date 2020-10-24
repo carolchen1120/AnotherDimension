@@ -99,26 +99,44 @@ public class Tester {
     // int[][] myMatrix5 = {{10, 13, 12}, {11, 24}, {15, 16}};
     // System.out.println(myAnswers.sum(myMatrix5) == 101);
 
-    // --- The following are the test sumCols() ---
-    int[][] myMatrix1 = {{10, 1, 2}, {1, 2, 3}, {5, 2, 10}};
-    int[] answer1 = {16, 5, 15};
-    System.out.println(Arrays.equals(myAnswers.sumCols(myMatrix1), answer1));
 
-    int[][] myMatrix2 = {{-9, -8, -7}, {1, 4, 2}, {5, -5, 0}};
-    int[] answer2 = {-3, -9, -5};
-    System.out.println(Arrays.equals(myAnswers.sumCols(myMatrix2), answer2));
+    // --- The following are to test sumCols() ---
+    // int[][] myMatrix1 = {{10, 1, 2}, {1, 2, 3}, {5, 2, 10}};
+    // int[] answer1 = {16, 5, 15};
+    // System.out.println(Arrays.equals(myAnswers.sumCols(myMatrix1), answer1));
+    //
+    // int[][] myMatrix2 = {{-9, -8, -7}, {1, 4, 2}, {5, -5, 0}};
+    // int[] answer2 = {-3, -9, -5};
+    // System.out.println(Arrays.equals(myAnswers.sumCols(myMatrix2), answer2));
+    //
+    // int[][] myMatrix3 = {{-9, -8}, {-8, -10}, {-10, -5}};
+    // int[] answer3 = {-27, -23};
+    // System.out.println(Arrays.equals(myAnswers.sumCols(myMatrix3), answer3));
+    //
+    // int[][] myMatrix4 = {{12}, {-1}, {0}};
+    // int[] answer4 = {11};
+    // System.out.println(Arrays.equals(myAnswers.sumCols(myMatrix4), answer4));
+    //
+    // int[][] myMatrix5 = {{10, 13, 12}, {11, 24, 10}, {15, 16, 13}};
+    // int[] answer5 = {36, 53, 35};
+    // System.out.println(Arrays.equals(myAnswers.sumCols(myMatrix5), answer5));
 
-    int[][] myMatrix3 = {{-9, -8}, {-8, -10}, {-10, -5}};
-    int[] answer3 = {-27, -23};
-    System.out.println(Arrays.equals(myAnswers.sumCols(myMatrix3), answer3));
+
+    // --- The following are to test isRowMagic() ---
+    int[][] myMatrix1 = {{3, 1, 2}, {1, 2, 3}, {5, 2, 0}};
+    System.out.println(myAnswers.isRowMagic(myMatrix1) == false);
+
+    int[][] myMatrix2 = {{-11, 4, 7}, {1, 4, -5}, {5, -5, 0}};
+    System.out.println(myAnswers.isRowMagic(myMatrix2) == true);
+
+    int[][] myMatrix3 = {{-6, -9}, {-8, -7}, {-10, -5}};
+    System.out.println(myAnswers.isRowMagic(myMatrix3) == true);
 
     int[][] myMatrix4 = {{12}, {-1}, {0}};
-    int[] answer4 = {11};
-    System.out.println(Arrays.equals(myAnswers.sumCols(myMatrix4), answer4));
+    System.out.println(myAnswers.isRowMagic(myMatrix4) == false);
 
     int[][] myMatrix5 = {{10, 13, 12}, {11, 24, 10}, {15, 16, 13}};
-    int[] answer5 = {36, 53, 35};
-    System.out.println(Arrays.equals(myAnswers.sumCols(myMatrix5), answer5));
+    System.out.println(myAnswers.isRowMagic(myMatrix5) == false);
 
   }
 }
